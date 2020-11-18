@@ -1,0 +1,60 @@
+.header{width: 750rpx; height: 90rpx; background: rgba(210,25,68,0.9); display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;}
+.header .logo {color: #fff; padding: 10rpx 30rpx; letter-spacing: 2rpx;}
+.header .newpostbtncon{width: 75rpx; height: 100%; display: flex; align-items: center; padding-right: 10rpx;}
+.header .newpostbtncon .newpostimg {width: 100%; }
+
+
+/* .popup{width: 750rpx; height: 2000rpx; display: flex; flex-direction: column; box-sizing: border-box;}
+.popup .mask{width: 100%; height: 100%; background: rgba(0,0,0,0.3); position: relative; top: -90rpx; padding: 30rpx;}
+.popup .popupcontent {width: 600rpx; height:400rpx; position: absolute; top: 200rpx; left:50rpx; background: #fff; display: flex; flex-direction: column; justify-content: space-around; padding: 30rpx;} */
+
+.container{width: 100%;  height: auto; background: rgb(236,229,216); display: flex; flex-direction:column; padding: 30rpx 40rpx; box-sizing: border-box; align-items: center; position: absolute; top: 90rpx}
+.container .postcontainer{width: 100%; box-sizing: border-box; display: flex; flex-direction: column;}
+.container .postcontainer .postcontent{width: 100%; height: 100%; background: #fff; box-sizing: border-box; padding: 10rpx 30rpx 20rpx 30rpx;}
+.container .postcontainer  .post{width: 100%; height: 100%; padding: 45rpx 0 40rpx 0;}
+.container .postcontainer .postcontent .postfooter {display: flex;}
+.container .postcontainer .postcontent .postfooter .tagimage{width: 30rpx; height: 30rpx; position: relative; top: 8rpx;}
+.container .postcontainer .postcontent .postfooter .postfootertag{font-size: 28rpx; padding-left: 28rpx; color: #9B97BE;} /*color: rgb(#9B8878);}*/
+
+.button-box {width: 100%; display: flex; padding: 20rpx 20rpx 10rpx 20rpx; justify-content: space-between; box-sizing: border-box; }
+.button-box .updown{display: flex; width: 150rpx;}
+.button-box button{padding: 0; margin: 0; font-weight: normal; color: red; border: 0rpx;}
+.button-box .btnstyle {display: flex; justify-content: center;}
+.button-box .btnstyle image{width: 20rpx;}
+.button-box .btnstyle .btntxt{font-size: 20rpx; padding-left: 10rpx;}
+
+.commentbox{width: 100%; background: #fff; padding: 10rpx 30rpx 30rpx 30rpx; box-sizing: border-box; display: flex; flex-direction: column; }
+.commentbox .othercomment{width: auto; height: 100%; margin-bottom: 20rpx; padding-bottom: 20rpx;  border-bottom: 1rpx dashed gray; display: flex;justify-content: left;}
+.commentbox .othercomment .othercommentnick, .commentbox .othercomment .othercommentcontent{font-size: 30rpx;}
+
+
+
+.commentcontainer{width: 100%; display: flex; flex-direction: column; box-sizing: border-box;}
+.commentcontainer .commentinput{width: 100%; height: 150rpx; border: solid 2rpx #DACEB7; padding: 20rpx; box-sizing: border-box; margin-bottom: 10rpx;}
+.commentcontainer .nickname{width: 100%;  height: 80rpx; border: solid 2rpx #DACEB7; padding: 20rpx; box-sizing: border-box;}
+.commentcontainer .cmtbtnbox{width: 100%; display: flex; justify-content: space-between;box-sizing: border-box; padding: 0 100rpx 0 100rpx;}
+.postcontainer image{height: 30rpx; width: 720rpx;}
+
+
+.npcontainer{width: 100%; height: 100%; padding: 40rpx 40rpx 10rpx 40rpx; display: flex; flex-direction: column; align-items: center; box-sizing: border-box;}
+.npcontainer .newpostform{width: 100%; height: 100%; display:flex;flex-direction: column;  justify-content: space-between;}
+.nplabel{font-size: 40rpx; color: rgba(0,100,255,0.6); padding-bottom: 20rpx; text-align: center;height: 80rpx;}
+.npcontainer .postinput{width: 100%;  border-bottom: solid 1rpx rgb(187, 183, 168); height: 600rpx;}
+.npcontainer .postnick{width: 100%; height: 150rpx;}
+
+.modal-btn-wrapper{width: 100%; display: flex; flex-direction: row; line-height: 100rpx;
+border-top: 2rpx solid rgba(7,17,27,0.1);}
+
+.modal-btn-wrappe button{border: 0rpx;}
+
+.cancel-btn {width: 50%;color: #666;text-align: center;border-right: 1px solid #dedede;}
+.confirm-btn {width: 50%;color: rgba(0,100,255,0.6);text-align: center;}
+
+
+
+
+
+.footer{display: flex; flex-direction: column; justify-content: space-between; align-items: center; color: rgba(210,25,68,0.9);}
+.footer .title{padding: 5rpx 0; font-size: 30rpx;}
+.footer .content{padding: 5rpx 0; font-size: 30rpx;}
+

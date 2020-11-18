@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="45.32.27.70" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="45.32.27.70">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/root/GOPATH/src/treehole" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

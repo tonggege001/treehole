@@ -1,0 +1,89 @@
+<view class="header">
+  <view class="logo">南大树洞</view>
+  <view class="newpostbtncon" bindtap="newpost">
+    <image class="newpostimg" mode="widthFix" src="/images/newpost.png"></image>
+  </view>
+</view>
+
+
+<view class="container">
+  <view class="postcontainer" wx:for="{{postlist}}" wx:for-index="post_idx" wx:id="id">
+    <view class="postcontent">
+      <view class="post">
+        <text selectable>{{item.content}}</text>
+      </view>
+      <view class="postfooter">
+        <image class="tagimage" src="/images/tag.png"></image>
+        <view class="postfootertag">{{item.time}}</view>
+      </view> 
+
+      <view class="button-box">
+        <view class="updown">
+          <button plain="true" style="width:50rpx;" bindtap="upclick" data-idx="{{post_idx}}">
+            <view class="btnstyle" data-idx="{{post_idx}}">
+              <image mode="heightFix" src="/images/up.png"></image>
+              <view class="btntxt">{{up[item.id]==0?"":up[item.id]}}</view>
+            </view>
+          </button>
+          <button plain="true" style="width:50rpx;" data-idx="{{post_idx}}" bindtap="downclick">
+            <view class="btnstyle">
+              <image mode="heightFix" src="/images/down.png"></image>
+              <view class="btntxt">{{down[item.id]==0?"":down[item.id]}}</view>
+            </view>
+          </button>
+        </view>
+        <view><button plain="true" style="width:100rpx;" data-idx="{{post_idx}}" bindtap="commentClick">
+            <view class="btnstyle">
+              <image mode="heightFix" src="/images/comment.png"></image>
+              <view class="btntxt">评论{{commentlist[item.id].length}}</view>
+            </view>
+          </button></view>
+      </view>
+    </view>
+
+    <view class="commentbox" hidden="{{!commentstate[item.id] }}" data-idx="{{post_idx}}">
+      <view class="othercomment" wx:for="{{commentlist[item.id]}}" wx:id="index" wx:for-item="e">
+        <text space="ensp" class="othercommentnick">{{e.nickname=="" ? "匿名":e.nickname}}: </text>
+        <text class="othercommentcontent" selectable>{{e.content}}</text>
+      </view>
+
+
+      <form catchsubmit="commentFormSubmit" data-idx="{{post_idx}}">
+        <view class="commentcontainer">
+          <textarea disabled="{{false}}" class="commentinput" name="comment" placeholder="评论……" />
+          <input disabled="{{false}}" class="nickname" name="nickname" placeholder="昵称(选填)" />
+          <view class="cmtbtnbox" >
+            <button style="margin:30rpx auto 0 auto;display:inline;" type="primary" formType="submit" data-idx="{{post_idx}}">发表</button>
+            <button style="margin:30rpx auto 0 auto;display:inline;"  formType="reset" data-idx="{{post_idx}}">重置</button>
+          </view>
+        </view>
+
+      </form>
+    </view>
+
+
+    <image mode="heightFix" src="/images/content_margin.png"></image>
+  </view>
+
+
+  <view class="footer">
+    <view class="title">微信小程序-树洞</view>
+    <view class="content">2020 © HUSTPORT</view>
+  </view>
+
+</view>
+
+
+<Modal show="{{popup}}">
+  <view class="npcontainer" >
+
+    <view class="nplabel">发表一个树洞</view>
+    <textarea maxlength="-1" bindinput="nptextareainput" value="{{nptextarea}}" class="postinput" name="postcomtent" placeholder="畅所欲言吧……" />
+    <input value="{{npinput}}" class="postnick" name="nickname" placeholder="昵称(选填)" />
+    <view class="modal-btn-wrapper">
+      <view class="cancel-btn" bindtap="newpostCancel">取消</view>
+      <view class="confirm-btn" bindtap="newpostSubmit">发送</view>
+    </view>
+
+  </view>
+</Modal> 
